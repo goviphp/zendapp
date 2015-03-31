@@ -1,0 +1,17 @@
+<!-- application/layouts/scripts/layout.phtml -->
+<?php echo $this->doctype() ?>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>TestApp</title>
+  <?php echo $this->headLink()->appendStylesheet('/css/global.css') ?>
+</head>
+<body>
+<div style="background-color: #EEEEEE; height: 30px;line-height:30px;">
+	<b>TestApp</b>
+</div>
+ 
+<?php echo $this->layout()->content ?>
+ 
+</body>
+</html>
