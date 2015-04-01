@@ -33,7 +33,7 @@ Note: I have installed XAMPP on my Windows D: drive.
 	- Map virtual host server name (zendapp.local) into local ip address
 	- add the below line into hosts file
 ````
-		127.0.0.1	zendapp.local
+		127.0.0.1	zendapplocal
 ````
 4.  Start the apache server by using XAMPP-control panel application (available inside the D:\xampp folder)
 
