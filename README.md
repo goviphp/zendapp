@@ -42,26 +42,26 @@ Note: I have installed XAMPP on my Windows D: drive.
 	</VirtualHost>
 ````
 8.  C:\Windows\System32\drivers\etc\hosts
-	- Map virtual host server name (zendapp.local) into local ip address
+	- Map virtual host server name (zendapplocal) into local ip address
 	- add the below line into hosts file
 ````
 		127.0.0.1	zendapplocal
 ````
 9.  Start the apache server by using XAMPP-control panel application (available inside the D:\xampp folder)
 
-10.  Open your browser and run the testapp http://zendapp.local
+10.  Open your browser and run the testapp http://zendapplocal
 
 
 ## Folder Structures
 1.  zendapp
-	- application, where we can start write all our MVC logics
+	- application (where we can start write all our MVC logics)
 		- configs
 		- controllers
 		- layouts
 		- models
 		- views
 		- Bootstrap.php
-	- docs,
+	- docs
 	- vendor
 	- public - Where server will starts the app
 		- index.php
