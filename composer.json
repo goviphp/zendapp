@@ -1,0 +1,15 @@
+{
+    "name": "zendframework/zendapp",
+    "description": "this is sample app",
+    "require": {
+        "zendframework/zendframework1": "1.12.11",
+        "php": ">=5.2.11",
+        "phpunit/phpunit": "4.5.1"
+    },
+    "authors": [
+        {
+            "name": "sundar",
+            "email": "sundar@testmail.com"
+        }
+    ]
+}
