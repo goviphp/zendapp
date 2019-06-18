@@ -1,0 +1,246 @@
+ 	 
+Questions : 4	 What is use of header() function in php ? What the Limitation of HEADER()?
+Answers : 4	In PHP Important to notice the Limitation of HEADER() function is that header() must be called before any actual output is send. Means must use header function before HTML or any echo stateament 
+There are Number of Use of HEADER() function in php like below
+1> The header() function use to sends a raw HTTP header to a client.
+2> We can use herder() function for redirection of pages. 
+3> Use for refresh the page on given time interval automatically.
+4> To send email header content like cc, bcc , reply to etc data and lot more .
+View Answers
+ 	
+	
+	
+	
+	
+	
+ 	 
+Questions : 12	What are the differences between Get and post methods.
+Answers : 12	There are some defference between GET and POST method 
+1. GET Method have some limit like only 2Kb data able to send for request 
+But in POST method unlimited data can we send 
+2. when we use GET method requested data show in url but 
+Not in POST method so POST method is good for send sensetive request
+ 	 
+	
+	
+ 	 
+Questions : 14	Suppose your Zend engine supports the mode <? ?> Then how can u
+configure your PHP Zend engine to support <?PHP ?> mode ?
+Answers : 14	In php.ini file:
+set
+short_open_tag=on
+to make PHP support
+ 	 
+
+
+	
+	
+ 	 
+Questions : 16	What is meant by nl2br()?
+Answers : 16	Inserts HTML line breaks (<BR />) before all newlines in a string.
+ 	 
+	
+	
+ 	 
+Questions : 18	How we get IP address of client, previous reference page etc ?
+Answers : 18	By using $_SERVER['REMOTE_ADDR'],$_SERVER['HTTP_REFERER'] etc.
+
+
+	
+	
+	
+ 	 
+	
+	
+ 	 
+Questions : 38	What is the maximum size of a file that can be uploaded using PHP
+and how can we change this?
+Answer : 38	By default the maximum size is 2MB. and we can change the following
+setup at php.iniupload_max_filesize = 2M
+ 	 
+Questions : 39	How can we increase the execution time of a PHP script?
+Answer : 39	by changing the following setup at php.inimax_execution_time = 30
+; Maximum execution time of each script, in seconds
+ 	 
+	
+	
+ 	 
+	
+ 	 
+	
+	
+ 	 
+Questions : 53	List out the predefined classes in PHP?
+Answer : 53	Directory
+stdClass
+__PHP_Incomplete_Class
+exception
+php_user_filter
+ 	 
+	
+	
+	
+	
+	
+ 	 
+Questions : 61	What are the other commands to know the structure of table using
+MySQL commands except explain command?
+Answer : 61	describe Table-Name;
+ 	 
+	
+	
+ 	 
+	
+	
+	
+	
+	
+	
+	
+ 	 
+Questions : 72	What is the difference between Primary Key and
+Unique key?
+Answer : 72	Primary Key: A column in a table whose values uniquely identify the
+rows in the table. A primary key value cannot be NULL.
+Unique Key: Unique Keys are used to uniquely identify each row in the
+table. There can be one and only one row for each unique key value. So
+NULL can be a unique key.There can be only one primary key for a table but there can be more
+than one unique for a table.
+ 	 
+	
+	
+	
+	
+	
+ 	 
+Questions : 75	What is the difference between GROUP BY and ORDER BY in Sql?
+Answer : 75	ORDER BY [col1],[col2],…,[coln]; Tels DBMS according to what columns
+it should sort the result. If two rows will hawe the same value in col1
+it will try to sort them according to col2 and so on.GROUP BY
+[col1],[col2],…,[coln]; Tels DBMS to group results with same value of
+column col1. You can use COUNT(col1), SUM(col1), AVG(col1) with it, if
+you want to count all items in group, sum all values or view average
+ 	 
+Questions : 76	What is the difference between char and varchar data types?
+Answer : 76	Set char to occupy n bytes and it will take n bytes even if u r
+storing a value of n-m bytes
+Set varchar to occupy n bytes and it will take only the required space
+and will not use the n bytes
+eg. name char(15) will waste 10 bytes if we store 'romharshan', if each char
+takes a byte
+eg. name varchar(15) will just use 5 bytes if we store 'romharshan', if each
+char takes a byte. rest 10 bytes will be free.
+ 	 
+	
+	
+ 	 
+	
+	
+ 	 
+	
+	
+ 	 
+	
+	
+ 	 
+Questions : 81	How we load all classes that placed in different directory in one PHP File , means how to do auto load classes
+Answer : 81	
+
+by using spl_autoload_register('autoloader::funtion');
+
+Like below 
+
+class autoloader
+
+{
+
+public static function moduleautoloader($class)
+
+{
+
+$path = $_SERVER['DOCUMENT_ROOT'] . "/modules/{$class}.php";
+
+if (is_readable($path)) require $path;
+
+}
+
+public static function daoautoloader($class)
+
+{
+
+$path = $_SERVER['DOCUMENT_ROOT'] . "/dataobjects/{$class}.php";
+
+if (is_readable($path)) require $path;
+
+}
+
+public static function includesautoloader($class)
+
+{
+
+$path = $_SERVER['DOCUMENT_ROOT'] . "/includes/{$class}.php";
+
+if (is_readable($path)) require $path;
+
+}
+
+}
+
+spl_autoload_register('autoloader::includesautoloader');
+
+spl_autoload_register('autoloader::daoautoloader');
+
+spl_autoload_register('autoloader::moduleautoloader');
+	
+	
+	
+ 	 
+Questions : 83	PHP how to know user has read the email?
+Answers : 83	Using Disposition-Notification-To: in mailheader we can get read receipt.
+Add the possibility to define a read receipt when sending an email.
+It’s quite straightforward, just edit email.php, and add this at vars definitions:
+var $readReceipt = null;
+And then, at ‘createHeader’ function add:
+if (!empty($this->readReceipt)) { 
+$this->__header .= ‘Disposition-Notification-To: ‘ . $this->__formatAddress($this->readReceipt) . $this->_newLine; 
+}
+ 	 
+Questions : 84	What are default session time and path?
+Answers : 84	default session time in PHP is 1440 seconds or 24 minutes
+Default session save path id temporary folder /tmp
+ 	 
+	
+	
+	
+	
+	
+ 	 
+	
+	
+ 	 
+	
+	
+	
+	
+	
+ 	 
+Questions : 90	what are magic methods?
+Answers : 90	Magic methods are the members functions that is available to all the instance of class Magic methods always starts with "__". Eg. __construct All magic methods needs to be declared as public To use magic method they should be defined within the class or program scope Various Magic Methods used in PHP 5 are: __construct() __destruct() __set() __get() __call() __toString() __sleep() __wakeup() __isset() __unset() __autoload() __clone()
+ 	 
+	
+	
+ 	 
+	
+ 	 
+	
+	
+ 	 
+Questions : 100	What is PHP's mysqli Extension?
+Answers : 100	The mysqli extension, or as it is sometimes known, the MySQL improved extension, was developed to take advantage of new features found in MySQL systems versions 4.1.3 and newer. The mysqli extension is included with PHP versions 5 and later.
+The mysqli extension has a number of benefits, the key enhancements over the mysql extension being: 
+=>Object-oriented interface 
+=>Support for Prepared Statements 
+=>Support for Multiple Statements 
+=>Support for Transactions 
+=>Enhanced debugging capabilities 
+=>Embedded server support 
